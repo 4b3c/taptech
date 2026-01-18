@@ -171,6 +171,14 @@
     @media (max-width: 600px) {
       h1 { font-size: 32px; }
     }
+
+    .hero { max-width: 760px; margin-bottom: 32px; }
+    .hero .subtitle { margin-bottom: 10px; }
+    .hero .subnote { margin: 0; }
+    .video-wrap { border: 1px solid #ddd; padding: 10px; background:#fff; }
+    video { width: 100%; height: auto; display:block; }
+    .tight { margin-top: 10px; color:#555; max-width:760px; }
+
   </style>
 </head>
 
@@ -180,109 +188,83 @@
     <header>
       <a class="brand" href="#">NFC Keychains</a>
       <nav>
+        <a href="#demo">Demo</a>
         <a href="#photos">Photos</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#examples">Examples</a>
+        <a href="#uses">Uses</a>
         <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <div class="hero">
-      <h1>Custom NFC Keychains for Clubs & Events</h1>
+      <h1>Custom NFC Keychains</h1>
       <p class="subtitle">
-        Custom keychain merch with embedded NFC chips—tap to open your club’s website, socials, or an event page.
+        Tap the keychain with a phone → it opens your club link.
       </p>
       <p class="subnote">
-        Made locally for student organizations and small businesses. Logo customization + NFC programming included.
+        Custom logo + NFC programming included. Made locally (ASU / small businesses).
       </p>
     </div>
 
-    <section id="how-it-works">
-      <h2>How it works</h2>
+    <section id="demo">
+      <h2>Tap demo</h2>
 
-      <p style="color:#555; max-width:760px; margin:0 0 12px;">
-        Each keychain contains a small NFC chip programmed with a link you choose. When someone taps the keychain with a smartphone,
-        their phone automatically opens your URL—no QR code, no typing.
-      </p>
-
-      <div class="grid" style="margin-top:16px;">
-        <div class="card">
-          <h3>1) You send</h3>
-          <p>Your logo + the link you want (Instagram, Linktree, Discord invite, website, event page, etc.).</p>
-        </div>
-        <div class="card">
-          <h3>2) I build</h3>
-          <p>I customize the design and program the NFC chips. I’ll confirm the look and the link before producing the batch.</p>
-        </div>
-        <div class="card">
-          <h3>3) You use</h3>
-          <p>Hand them out at tabling, meetings, or events. People tap and instantly land where you want them.</p>
-        </div>
+      <div class="video-wrap">
+        <video controls playsinline preload="metadata">
+          <!-- MP4 first (best compatibility) -->
+          <source src="https://github.com/4b3c/taptech/blob/main/demo.mp4?raw=true" type="video/mp4" />
+          <!-- Optional fallback if you still want to keep the .mov -->
+          <source src="https://github.com/4b3c/taptech/blob/main/IMG_5019.mov?raw=true" type="video/quicktime" />
+          Your browser can’t play this video.
+        </video>
       </div>
 
-      <p style="color:#555; max-width:760px; margin:16px 0 0;">
-        NFC (Near Field Communication) is built into most modern iPhones and Android phones, so tapping works for the majority of people.
+      <p class="tight">
+        If the video doesn’t load here, open it directly:
+        <a href="https://github.com/4b3c/taptech/blob/main/demo.mp4?raw=true">view the demo video</a>.
       </p>
     </section>
+
 
     <section id="photos">
       <h2>Photos</h2>
-      <p style="color:#555; max-width:760px; margin:0;">
-        A couple recent examples. I’ll work with your club to create a design that matches your branding.
-      </p>
-
       <div class="gallery">
         <div class="shot">
-          <img src="https://github.com/4b3c/taptech/blob/main/four.jpeg?raw=true" alt="NFC keychain photo showing front and back sides" loading="lazy" />
-          <div class="caption">Front and back sides</div>
+          <img src="https://github.com/4b3c/taptech/blob/main/four.jpeg?raw=true" alt="Keychains front and back" loading="lazy" />
+          <div class="caption">Front + back</div>
         </div>
         <div class="shot">
-          <img src="https://github.com/4b3c/taptech/blob/main/two.jpeg?raw=true" alt="NFC keychain photo showing Spotify logo keychains" loading="lazy" />
-          <div class="caption">Completed Spotify logo keychains</div>
+          <img src="https://github.com/4b3c/taptech/blob/main/two.jpeg?raw=true" alt="Spotify logo keychains" loading="lazy" />
+          <div class="caption">Example batch</div>
         </div>
       </div>
     </section>
 
-    <section id="examples">
-      <h2>How clubs use them</h2>
-
+    <section id="uses">
+      <h2>Best for</h2>
       <div class="grid">
         <div class="card">
-          <h3>Recruiting & tabling</h3>
-          <p>
-            Give them away at events so people can instantly follow, join, or learn more—link to your Instagram, Linktree,
-            Discord invite, or website.
-          </p>
+          <h3>Tabling</h3>
+          <p>Tap → follow/join instantly (IG, Linktree, Discord, site).</p>
         </div>
-
         <div class="card">
-          <h3>Custom team merch</h3>
-          <p>
-            Members carry the logo daily. If someone asks what it is, a quick tap opens your club or business page on the spot.
-          </p>
+          <h3>Merch</h3>
+          <p>Logo keychain that also links to your club.</p>
         </div>
-
         <div class="card">
-          <h3>Events & check-ins</h3>
-          <p>
-            Link to a specific event page, RSVP form, Google Form, or ticket link. Great for conferences, workshops, and launches.
-          </p>
+          <h3>Events</h3>
+          <p>Link to RSVP, signup form, or event page.</p>
         </div>
       </div>
     </section>
 
     <section id="pricing">
       <h2>Pricing</h2>
-      <p style="color:#555; max-width:760px; margin:0;">
-        Bulk pricing for student orgs. Includes logo customization and NFC programming.
-      </p>
-
       <table>
         <thead>
           <tr>
             <th>Quantity</th>
-            <th>Price per keychain</th>
+            <th>Price each</th>
           </tr>
         </thead>
         <tbody>
@@ -300,19 +282,18 @@
           </tr>
         </tbody>
       </table>
-
       <p style="font-size:13px; color:#666; margin-top:12px;">
-        Prices may vary slightly based on materials, design complexity, and deadlines.
+        Pricing may vary slightly by materials/design/deadline.
       </p>
     </section>
 
     <footer id="contact">
       <div>
         <strong>Contact</strong><br />
-        Email me if you’re interested in ordering, want a quick mockup, or have questions.
+        awpierc2@asu.edu
       </div>
       <div class="email">
-        <a href="mailto:awpierc2@asu.edu?subject=NFC%20Keychains%20Inquiry">awpierc2@asu.edu</a>
+        <a href="mailto:awpierc2@asu.edu?subject=NFC%20Keychains%20Inquiry">Email me</a>
       </div>
     </footer>
 
