@@ -17,10 +17,7 @@
       line-height: 1.5;
     }
 
-    a {
-      color: #111;
-      text-decoration: none;
-    }
+    a { color: #111; text-decoration: underline; text-underline-offset: 2px; }
 
     .container {
       max-width: 960px;
@@ -28,7 +25,6 @@
       padding: 32px 20px 64px;
     }
 
-    /* Header */
     header {
       display: flex;
       justify-content: space-between;
@@ -39,22 +35,21 @@
     .brand {
       font-weight: 700;
       font-size: 18px;
+      text-decoration: none;
     }
 
     nav a {
       margin-left: 20px;
       font-size: 14px;
       color: #555;
+      text-decoration: none;
     }
 
-    nav a:hover {
-      color: #000;
-    }
+    nav a:hover { color: #000; text-decoration: underline; }
 
-    /* Hero */
     .hero {
-      max-width: 640px;
-      margin-bottom: 56px;
+      max-width: 720px;
+      margin-bottom: 32px;
     }
 
     h1 {
@@ -67,26 +62,16 @@
     .subtitle {
       font-size: 18px;
       color: #444;
-      margin-bottom: 24px;
+      margin: 0 0 10px;
     }
 
-    .cta {
-      display: inline-block;
-      padding: 12px 18px;
-      border: 1px solid #111;
-      font-weight: 600;
+    .subnote {
       font-size: 14px;
+      color: #666;
+      margin: 0 0 0;
     }
 
-    .cta:hover {
-      background: #111;
-      color: #fff;
-    }
-
-    /* Sections */
-    section {
-      margin-bottom: 56px;
-    }
+    section { margin-bottom: 56px; }
 
     h2 {
       font-size: 24px;
@@ -102,6 +87,7 @@
     .card {
       border: 1px solid #ddd;
       padding: 18px;
+      background: #fff;
     }
 
     .card h3 {
@@ -115,7 +101,34 @@
       color: #555;
     }
 
-    /* Pricing */
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .shot {
+      border: 1px solid #ddd;
+      padding: 10px;
+      background: #fff;
+    }
+
+    .shot img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* Pricing table */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -134,7 +147,6 @@
       font-weight: 600;
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid #ddd;
       padding-top: 24px;
@@ -144,6 +156,16 @@
       gap: 16px;
       font-size: 14px;
       color: #555;
+    }
+
+    .email {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      color: #111;
+    }
+
+    @media (max-width: 800px) {
+      .gallery { grid-template-columns: 1fr; }
+      .shot img { height: 260px; }
     }
 
     @media (max-width: 600px) {
@@ -156,8 +178,10 @@
   <div class="container">
 
     <header>
-      <div class="brand">NFC Keychains</div>
+      <a class="brand" href="#">NFC Keychains</a>
       <nav>
+        <a href="#photos">Photos</a>
+        <a href="#how-it-works">How it works</a>
         <a href="#examples">Examples</a>
         <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
@@ -167,38 +191,91 @@
     <div class="hero">
       <h1>Custom NFC Keychains for Clubs & Events</h1>
       <p class="subtitle">
-        Simple merch that links instantly to your club’s Instagram,
-        Linktree, website, or Discord. Designed for student organizations.
+        Custom keychain merch with embedded NFC chips—tap to open your club’s website, socials, or an event page.
       </p>
-      <!-- Replace email -->
-      <a class="cta" href="mailto:YOUR_EMAIL_HERE?subject=NFC%20Keychains%20Inquiry">
-        Request a quote
-      </a>
+      <p class="subnote">
+        Made locally for student organizations and small businesses. Logo customization + NFC programming included.
+      </p>
     </div>
+
+    <section id="how-it-works">
+      <h2>How it works</h2>
+
+      <p style="color:#555; max-width:760px; margin:0 0 12px;">
+        Each keychain contains a small NFC chip programmed with a link you choose. When someone taps the keychain with a smartphone,
+        their phone automatically opens your URL—no QR code, no typing.
+      </p>
+
+      <div class="grid" style="margin-top:16px;">
+        <div class="card">
+          <h3>1) You send</h3>
+          <p>Your logo + the link you want (Instagram, Linktree, Discord invite, website, event page, etc.).</p>
+        </div>
+        <div class="card">
+          <h3>2) I build</h3>
+          <p>I customize the design and program the NFC chips. I’ll confirm the look and the link before producing the batch.</p>
+        </div>
+        <div class="card">
+          <h3>3) You use</h3>
+          <p>Hand them out at tabling, meetings, or events. People tap and instantly land where you want them.</p>
+        </div>
+      </div>
+
+      <p style="color:#555; max-width:760px; margin:16px 0 0;">
+        NFC (Near Field Communication) is built into most modern iPhones and Android phones, so tapping works for the majority of people.
+      </p>
+    </section>
+
+    <section id="photos">
+      <h2>Photos</h2>
+      <p style="color:#555; max-width:760px; margin:0;">
+        A couple recent examples. I’ll work with your club to create a design that matches your branding.
+      </p>
+
+      <div class="gallery">
+        <div class="shot">
+          <img src="https://github.com/4b3c/taptech/blob/main/four.jpeg?raw=true" alt="NFC keychain photo showing front and back sides" loading="lazy" />
+          <div class="caption">Front and back sides</div>
+        </div>
+        <div class="shot">
+          <img src="https://github.com/4b3c/taptech/blob/main/two.jpeg?raw=true" alt="NFC keychain photo showing Spotify logo keychains" loading="lazy" />
+          <div class="caption">Completed Spotify logo keychains</div>
+        </div>
+      </div>
+    </section>
 
     <section id="examples">
       <h2>How clubs use them</h2>
+
       <div class="grid">
         <div class="card">
           <h3>Recruiting & tabling</h3>
-          <p>Members tap the keychain and instantly follow or join your club.</p>
+          <p>
+            Give them away at events so people can instantly follow, join, or learn more—link to your Instagram, Linktree,
+            Discord invite, or website.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Custom merch</h3>
-          <p>Your logo, your colors, programmed to your chosen link.</p>
+          <h3>Custom team merch</h3>
+          <p>
+            Members carry the logo daily. If someone asks what it is, a quick tap opens your club or business page on the spot.
+          </p>
         </div>
+
         <div class="card">
-          <h3>Events</h3>
-          <p>Great as giveaways, membership perks, or event keepsakes.</p>
+          <h3>Events & check-ins</h3>
+          <p>
+            Link to a specific event page, RSVP form, Google Form, or ticket link. Great for conferences, workshops, and launches.
+          </p>
         </div>
       </div>
     </section>
 
     <section id="pricing">
       <h2>Pricing</h2>
-      <p style="color:#555; max-width:600px;">
-        Pricing includes logo customization and NFC programming.
-        Bulk discounts available for student organizations.
+      <p style="color:#555; max-width:760px; margin:0;">
+        Bulk pricing for student orgs. Includes logo customization and NFC programming.
       </p>
 
       <table>
@@ -231,14 +308,11 @@
 
     <footer id="contact">
       <div>
-        <strong>Interested?</strong><br>
-        Send your logo, link, and quantity estimate.
+        <strong>Contact</strong><br />
+        Email me if you’re interested in ordering, want a quick mockup, or have questions.
       </div>
-      <!-- Replace email -->
-      <div>
-        <a class="cta" href="mailto:YOUR_EMAIL_HERE?subject=NFC%20Keychains%20Inquiry">
-          Email me
-        </a>
+      <div class="email">
+        <a href="mailto:awpierc2@asu.edu?subject=NFC%20Keychains%20Inquiry">awpierc2@asu.edu</a>
       </div>
     </footer>
 
